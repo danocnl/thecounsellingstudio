@@ -161,7 +161,7 @@ nav.scrolled::after {
 }
 h1.hero-title {
   color: var(--text);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 h1.hero-title em { color: var(--sage-deep); }
 .hero-bio {
@@ -565,12 +565,30 @@ footer a:hover { color: rgba(243,237,226,0.75); }
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
   .inner { padding-left: 0; padding-right: 0; }
-
+  .hero-wrap {
+    --nav-h: 4.6rem;
+    height: 100vh;
+    height: 100dvh;
+    min-height: unset;
+    padding: 1.5rem;
+    padding-top: calc(var(--nav-h) + 1.5rem);
+    align-items: stretch;
+  }
   .hero-card {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: stretch;
     padding: 2.5rem 2rem 2.5rem;
-    min-height: auto;
+    min-height: unset;
+    height: 100%;
   }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-eyebrow { margin-bottom: 0; }
+  h1.hero-title { margin-top: auto; }
+  .hero-bio { margin-bottom: 0; }
   .hero-illustration {
     position: absolute;
     right: -24px;
@@ -581,7 +599,7 @@ footer a:hover { color: rgba(243,237,226,0.75); }
     pointer-events: none;
     display: flex;
   }
-  .btn-hero { width: 100%; justify-content: center; }
+  .btn-hero { width: 100%; justify-content: center; margin-top: auto; }
   .help-grid { grid-template-columns: 1fr; }
   .help-card.hc-2, .help-card.hc-3 { margin-top: 0; }
   .approach-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -591,7 +609,7 @@ footer a:hover { color: rgba(243,237,226,0.75); }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
 @media (max-width: 480px) {
-  .hero-card { padding: 2rem 1.5rem 2rem; border-radius: 1.75rem; }
+  .hero-card { padding: 2rem; border-radius: 1.75rem; }
   h1 { font-size: 2.5rem; }
 }
 
